@@ -1,6 +1,16 @@
 # Modern Neovim Configuration
 
+> **Created by Google Antigravity**
+
 A blazing fast, fully configured Neovim environment designed for Rust, Python, and Full-Stack Web Development.
+
+## 🔒 Security & Privacy
+
+This configuration is designed with privacy in mind:
+- **Telemetry Disabled**: The Lua Language Server telemetry is explicitly disabled.
+- **Open Source**: All plugins are fetched from reputable open-source repositories on GitHub.
+- **Local Execution**: All code analysis (LSP), formatting, and linting happens locally on your machine.
+- **No Data Exfiltration**: This configuration contains no code to send your keystrokes or file content to external servers.
 
 ## ⚡ Features
 

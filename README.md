@@ -23,6 +23,9 @@ This configuration is designed with privacy in mind:
 - **File Explorer**: [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim).
 - **Git**: [Gitsigns](https://github.com/lewis6991/gitsigns.nvim).
 - **Testing**: [Neotest](https://github.com/nvim-neotest/neotest).
+- **Commenting**: [Comment.nvim](https://github.com/numToStr/Comment.nvim) for easy toggle commenting.
+- **Multi-Cursor**: [vim-visual-multi](https://github.com/mg979/vim-visual-multi) for VSCode-like multi-cursor editing.
+- **Folding**: [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) for high-performance code folding.
 
 ## 🛠️ Requirements
 
@@ -112,12 +115,27 @@ This configuration is designed with privacy in mind:
 - `<leader>to`: Open test output
 - `<leader>ts`: Toggle test summary
 
-### Folding
+### Folding (nvim-ufo)
 - `za`: Toggle fold under cursor
 - `zc`: Close fold
 - `zo`: Open fold
 - `zM`: Close all folds
 - `zR`: Open all folds
+- `zr`: Open folds except kinds
+- `zm`: Close folds with
+
+### Commenting
+- `gcc`: Toggle comment for current line
+- `gc` + motion: Toggle comment for target (e.g., `gcip` for paragraph)
+- `gc` (Visual Mode): Toggle comment for selection
+
+### Multi-Cursor
+- `<C-d>`: Select word under cursor and find next occurrence (VSCode-like)
+- `<C-n>`: Add cursor down / select next
+- `<C-Up>/<C-Down>`: Add cursors vertically
+- `n/N`: Get next/previous occurrence (in multi-cursor mode)
+- `q`: Skip current and get next
+- `<Esc>`: Exit multi-cursor mode
 
 ### Markdown
 - `<leader>mp`: Toggle Markdown Preview
@@ -134,7 +152,11 @@ This configuration is designed with privacy in mind:
 │   └── plugins/          # Plugin specs
 │       ├── core.lua      # UI, Telescope, Treesitter
 │       ├── lsp.lua       # Mason, LspConfig, Conform, Cmp
+│       ├── ufo.lua       # Code folding (nvim-ufo)
+│       ├── comments.lua  # Commenting (Comment.nvim)
+│       ├── multicursor.lua # Multi-cursor (vim-visual-multi)
 │       └── languages/    # Language specific setups
+│           ├── markdown.lua
 │           ├── rust.lua
 │           ├── python.lua
 │           └── web.lua

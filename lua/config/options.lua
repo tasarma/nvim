@@ -33,6 +33,12 @@ opt.clipboard = "unnamedplus"
 opt.splitright = true
 opt.splitbelow = true
 
+-- Folding (Handled by nvim-ufo)
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- opt.foldlevel = 99 -- Open all folds by default
+-- opt.foldlevelstart = 99
+
 -- Leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

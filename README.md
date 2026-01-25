@@ -112,6 +112,16 @@ This configuration is designed with privacy in mind:
 - `<leader>to`: Open test output
 - `<leader>ts`: Toggle test summary
 
+### Folding
+- `za`: Toggle fold under cursor
+- `zc`: Close fold
+- `zo`: Open fold
+- `zM`: Close all folds
+- `zR`: Open all folds
+
+### Markdown
+- `<leader>mp`: Toggle Markdown Preview
+
 ## 📂 Structure
 
 ```text
@@ -143,3 +153,8 @@ This configuration is designed with privacy in mind:
 ## 🌐 Web (TS/JS/React/Svelte)
 - **LSP**: `ts_ls`, `tailwindcss`, `svelte`, `html`, `cssls`
 - **Formatting**: `prettier` (via `conform.nvim`)
+
+## 📝 Markdown
+- **LSP**: `marksman`
+- **Preview**: `<leader>mp` to toggle browser preview.
+- **Rendering**: In-editor rendering of tables, checkboxes, and headers.

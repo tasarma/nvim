@@ -15,7 +15,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { 
           "lua_ls", "rust_analyzer", "pyright", "ruff", 
-          "ts_ls", "tailwindcss", "html", "cssls", "svelte"
+          "ts_ls", "tailwindcss", "html", "cssls", "svelte", "marksman"
         },
         automatic_installation = true,
         handlers = {
@@ -60,6 +60,7 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
+        markdown = { "prettier" },
       },
       format_on_save = { timeout_ms = 500, lsp_fallback = true },
     },

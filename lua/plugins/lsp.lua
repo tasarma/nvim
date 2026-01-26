@@ -16,7 +16,7 @@ return {
         ensure_installed = { 
           "lua_ls", "rust_analyzer", "pyright", "ruff", 
           "ts_ls", "tailwindcss", "html", "cssls", "svelte", "marksman",
-          "dockerls", "yamlls", "taplo", "jsonls"
+          "dockerls", "yamlls", "taplo", "jsonls", "terraformls", "ansiblels"
         },
         automatic_installation = true,
         handlers = {

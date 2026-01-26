@@ -11,4 +11,10 @@ return {
     lazy = true,
     version = false,
   },
+
+  -- Terraform Support
+  {
+    "hashivim/vim-terraform",
+    ft = { "terraform", "hcl" },
+  },
 }

@@ -26,7 +26,7 @@ return {
           "lua", "vim", "vimdoc", "rust", "python", 
           "javascript", "typescript", "tsx", "html", "css", "svelte", "json", "toml",
           "markdown", "markdown_inline",
-          "dockerfile", "yaml"
+          "dockerfile", "yaml", "hcl", "terraform"
         },
         highlight = { enable = true },
         indent = { enable = true },

@@ -196,6 +196,16 @@ This configuration is designed with privacy in mind:
   - **LSP**: `jsonls` - JSON language server with schema support
   - **Schemas**: Auto-completion for `package.json`, `tsconfig.json`, and more
   - **Formatting**: `prettier`
+- **Terraform**:
+  - **LSP**: `terraformls` - HashiCorp Terraform Language Server
+  - **Syntax**: Treesitter highlighting for HCL and Terraform
+  - **Plugin**: `vim-terraform` for enhanced indentation and alignment
+- **Kubernetes**:
+  - **LSP**: `yamlls` with specialized Kubernetes schemas
+  - **Validation**: Real-time schema validation for K8s resources
+- **Ansible**:
+  - **LSP**: `ansiblels` - Ansible Language Server
+  - **Syntax**: YAML-based highlighting with Ansible-specific awareness
 - **TOML**:
   - **LSP**: `taplo` - TOML language server
   - **Syntax**: Treesitter highlighting

@@ -24,6 +24,7 @@ This configuration is designed with privacy in mind:
 - **Git**: [Gitsigns](https://github.com/lewis6991/gitsigns.nvim).
 - **Testing**: [Neotest](https://github.com/nvim-neotest/neotest).
 - **Commenting**: [Comment.nvim](https://github.com/numToStr/Comment.nvim) for easy toggle commenting.
+- **Auto-Pairs**: [nvim-autopairs](https://github.com/windwp/nvim-autopairs) for automatic bracket and quote pairing.
 - **Multi-Cursor**: [vim-visual-multi](https://github.com/mg979/vim-visual-multi) for VSCode-like multi-cursor editing.
 - **Folding**: [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) for high-performance code folding.
 

@@ -25,7 +25,8 @@ return {
         ensure_installed = { 
           "lua", "vim", "vimdoc", "rust", "python", 
           "javascript", "typescript", "tsx", "html", "css", "svelte", "json", "toml",
-          "markdown", "markdown_inline"
+          "markdown", "markdown_inline",
+          "dockerfile", "yaml"
         },
         highlight = { enable = true },
         indent = { enable = true },

@@ -130,7 +130,7 @@ This configuration is designed with privacy in mind:
 - `gc` (Visual Mode): Toggle comment for selection
 
 ### Multi-Cursor
-- `<C-d>`: Select word under cursor and find next occurrence (VSCode-like)
+- `gb`: Select word under cursor and find next occurrence
 - `<C-n>`: Add cursor down / select next
 - `<C-Up>/<C-Down>`: Add cursors vertically
 - `n/N`: Get next/previous occurrence (in multi-cursor mode)
@@ -156,6 +156,7 @@ This configuration is designed with privacy in mind:
 │       ├── comments.lua  # Commenting (Comment.nvim)
 │       ├── multicursor.lua # Multi-cursor (vim-visual-multi)
 │       └── languages/    # Language specific setups
+│           ├── devops.lua
 │           ├── markdown.lua
 │           ├── rust.lua
 │           ├── python.lua
@@ -180,3 +181,20 @@ This configuration is designed with privacy in mind:
 - **LSP**: `marksman`
 - **Preview**: `<leader>mp` to toggle browser preview.
 - **Rendering**: In-editor rendering of tables, checkboxes, and headers.
+
+## 🐳 DevOps
+- **Docker**:
+  - **LSP**: `dockerls` - Docker language server for Dockerfiles
+  - **Linting**: `hadolint` - Dockerfile linter
+  - **Syntax**: Treesitter highlighting
+- **YAML**:
+  - **LSP**: `yamlls` - YAML language server with schema support
+  - **Schemas**: Auto-completion and validation for Kubernetes, GitHub Actions, Docker Compose, and more
+  - **Syntax**: Treesitter highlighting
+- **JSON**:
+  - **LSP**: `jsonls` - JSON language server with schema support
+  - **Schemas**: Auto-completion for `package.json`, `tsconfig.json`, and more
+  - **Formatting**: `prettier`
+- **TOML**:
+  - **LSP**: `taplo` - TOML language server
+  - **Syntax**: Treesitter highlighting

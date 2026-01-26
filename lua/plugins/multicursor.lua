@@ -5,10 +5,10 @@ return {
   init = function()
     -- Optional: customize the leader key for VM (default is \\)
     -- vim.g.VM_leader = "\\\\"
-    -- Map to match VSCode-like behavior
+    -- Map to non-conflicting keys (gb = go to next)
     vim.g.VM_maps = {
-      ["Find Under"] = "<C-d>",         -- Start multi-cursor with Ctrl+D (like VSCode)
-      ["Find Subword Under"] = "<C-d>", -- Also for subwords
+      ["Find Under"] = "gb",         -- Start multi-cursor with gb
+      ["Find Subword Under"] = "gb", -- Also for subwords
     }
     vim.g.VM_theme = "iceblue"
   end,

@@ -15,7 +15,8 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { 
           "lua_ls", "rust_analyzer", "pyright", "ruff", 
-          "ts_ls", "tailwindcss", "html", "cssls", "svelte", "marksman"
+          "ts_ls", "tailwindcss", "html", "cssls", "svelte", "marksman",
+          "dockerls", "yamlls", "taplo", "jsonls"
         },
         automatic_installation = true,
         handlers = {
@@ -35,6 +36,31 @@ return {
                   diagnostics = { globals = { "vim" } },
                   workspace = { checkThirdParty = false },
                   telemetry = { enable = false },
+                },
+              },
+            })
+          end,
+          ["yamlls"] = function()
+            lspconfig.yamlls.setup({
+              capabilities = capabilities,
+              settings = {
+                yaml = {
+                  schemaStore = {
+                    enable = false,
+                    url = "",
+                  },
+                  schemas = require("schemastore").yaml.schemas(),
+                },
+              },
+            })
+          end,
+          ["jsonls"] = function()
+            lspconfig.jsonls.setup({
+              capabilities = capabilities,
+              settings = {
+                json = {
+                  schemas = require("schemastore").json.schemas(),
+                  validate = { enable = true },
                 },
               },
             })

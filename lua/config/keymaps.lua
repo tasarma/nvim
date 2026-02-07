@@ -27,7 +27,17 @@ map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete Buffer" })
+map("n", "<leader>bd", function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.cmd("bnext")
+  if vim.api.nvim_get_current_buf() == bufnr then
+      vim.cmd("bprevious")
+  end
+  if vim.api.nvim_get_current_buf() == bufnr then
+      vim.cmd("new") 
+  end
+  vim.cmd("bd " .. bufnr)
+end, { desc = "Delete Buffer" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
